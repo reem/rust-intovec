@@ -1,11 +1,8 @@
 [package]
 
 name = "intovec"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Jonathan Reem <jonathan.reem@gmail.com>"]
-
-[lib]
-
-name = "intovec"
-path = "src/lib.rs"
+description = "IntoVec, a trait for converting types into Vec, avoiding copies when possible."
+license = "MIT"
 
