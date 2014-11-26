@@ -2,7 +2,7 @@
 #![deny(missing_docs)]
 #![deny(warnings)]
 
-//! Crate comment goes here
+//! Convert types into a Vec, avoiding copies when possible.
 
 /// Anything convertible into a Vec with or without copies, but avoiding them if possible.
 pub trait IntoVec<T> {
