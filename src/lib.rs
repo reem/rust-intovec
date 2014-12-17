@@ -23,8 +23,8 @@ impl<'a, T: Clone> IntoVec<T> for &'a [T] {
 impl<T> IntoVec<T> for Box<[T]> {
     #[inline]
     fn into_vec(self) -> Vec<T> {
-        use std::slice::BoxedSlicePrelude;
-        fn boxed_into_vec<T, B: BoxedSlicePrelude<T>>(b: B) -> Vec<T> { b.into_vec() }
+        use std::slice::BoxedSliceExt;
+        fn boxed_into_vec<T, B: BoxedSliceExt<T>>(b: B) -> Vec<T> { b.into_vec() }
 
         boxed_into_vec(self)
     }
